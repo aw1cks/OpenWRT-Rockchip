@@ -6,3 +6,4 @@ RUN apt-get update -y && \
     groupadd -g 1000 build && \
     useradd -m -g 1000 -d /build build
 USER build
+ENTRYPOINT ["/build/tmp/docker/run_build.sh"]

@@ -1,0 +1,11 @@
+---
+
+version: '2'
+services:
+  openwrt-build:
+    restart: 'no'
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}:/build/tmp
